@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-wealthwise-primary text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div>
             <img 
               src="/lovable-uploads/5d2cce99-6fc6-40db-b40c-7d0f8ad607db.png" 
@@ -95,23 +95,6 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Subscribe</h4>
-            <p className="text-wealthwise-light/80 mb-4">
-              Subscribe to our newsletter to receive the latest financial insights and updates.
-            </p>
-            <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="flex-grow px-4 py-2 rounded-l-md focus:outline-none text-wealthwise-dark"
-              />
-              <button className="bg-wealthwise-secondary text-wealthwise-primary px-4 py-2 rounded-r-md hover:bg-opacity-90 transition-colors">
-                <ArrowRight className="h-5 w-5" />
-              </button>
-            </div>
           </div>
         </div>
         
