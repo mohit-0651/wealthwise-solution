@@ -34,7 +34,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/b0967d24-1c6b-4416-b146-f622ce4a18bd.png" 
               alt="WealthWise Solutions" 
-              className="w-64 md:w-80 lg:w-[28rem] animate-float"
+              className="w-64 md:w-80 lg:w-[28rem] animate-pulse-once"
             />
           </div>
           
@@ -47,8 +47,16 @@ const Hero = () => {
               Expert financial guidance to help you build and protect your wealth for generations to come.
             </p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <button className="button-secondary">Discover Our Services</button>
-              <button className="button-primary bg-white/20 hover:bg-white/30 backdrop-blur-sm">
+              <button 
+                onClick={() => scrollToSection('services')} 
+                className="button-secondary"
+              >
+                Discover Our Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')} 
+                className="button-primary bg-white/20 hover:bg-white/30 backdrop-blur-sm"
+              >
                 Schedule a Consultation
               </button>
             </div>
