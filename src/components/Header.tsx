@@ -30,7 +30,9 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        scrolled 
+          ? 'bg-white shadow-md py-2' 
+          : 'bg-wealthwise-dark/90 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -44,10 +46,10 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-4">
-          <a onClick={() => scrollToSection('home')} className="nav-link cursor-pointer">Home</a>
-          <a onClick={() => scrollToSection('about')} className="nav-link cursor-pointer">About Us</a>
-          <a onClick={() => scrollToSection('services')} className="nav-link cursor-pointer">Services</a>
-          <a onClick={() => scrollToSection('contact')} className="nav-link cursor-pointer">Contact</a>
+          <a onClick={() => scrollToSection('home')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>Home</a>
+          <a onClick={() => scrollToSection('about')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>About Us</a>
+          <a onClick={() => scrollToSection('services')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>Services</a>
+          <a onClick={() => scrollToSection('contact')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>Contact</a>
           <button className="button-primary ml-4">Get Started</button>
         </nav>
         
@@ -55,12 +57,12 @@ const Header = () => {
         <div className="md:hidden">
           {mobileMenuOpen ? (
             <X 
-              className="text-wealthwise-primary h-6 w-6 cursor-pointer" 
+              className={`h-6 w-6 cursor-pointer ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`} 
               onClick={() => setMobileMenuOpen(false)}
             />
           ) : (
             <Menu 
-              className="text-wealthwise-primary h-6 w-6 cursor-pointer" 
+              className={`h-6 w-6 cursor-pointer ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`} 
               onClick={() => setMobileMenuOpen(true)}
             />
           )}

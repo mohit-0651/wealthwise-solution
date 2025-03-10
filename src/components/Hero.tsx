@@ -10,23 +10,14 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center bg-wealthwise-primary overflow-hidden">
+    <section id="home" className="relative h-screen flex items-center justify-center bg-wealthwise-primary overflow-hidden pt-20">
       {/* Background pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iIzJCNTU0MCIgZmlsbC1vcGFjaXR5PSIwLjQiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYgMzRjMC0yIDEtMyAyLTNzMi45IDEgMyAzdjNjMCAyIDEgMyAzIDNzMy0xIDMtM3YtMWMwLTIgMS00IDMtNHM0IDIgNCA0djEwYzAgMi0xIDMtMyAzcy0zLTEtMy0zVjM2YzAtMS0uNC0yLTEtMnMtMiAuNC0yIDF2MTBjMCAyLTEgMy0zIDNzLTMtMS0zLTN2LTZ2LTRjMC0xLS40LTItMS0ycy0yIC40LTIgMXYxNmMwIDItMSAzLTMgM3MtMy0xLTMtM1YzNHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==')] opacity-20"></div>
       
       {/* Two-column layout for desktop */}
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 z-10">
-        {/* Left column with logo */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end animate-fade-in-left">
-          <img 
-            src="/lovable-uploads/5d2cce99-6fc6-40db-b40c-7d0f8ad607db.png" 
-            alt="WealthWise Solutions" 
-            className="w-64 md:w-80 lg:w-96 animate-float"
-          />
-        </div>
-        
-        {/* Right column with text and buttons */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
+        {/* Left column with text and buttons - moved more to the left */}
+        <div className="w-full lg:w-3/5 text-center lg:text-left text-white lg:ml-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 opacity-0 animate-fade-in-delay-1">
             Your path to financial freedom starts with <span className="text-wealthwise-secondary">WealthWise</span>
           </h1>
@@ -39,6 +30,15 @@ const Hero = () => {
               Schedule a Consultation
             </button>
           </div>
+        </div>
+        
+        {/* Right column with logo - moved to the end */}
+        <div className="w-full lg:w-2/5 flex justify-center lg:justify-end animate-fade-in-left">
+          <img 
+            src="/lovable-uploads/b0967d24-1c6b-4416-b146-f622ce4a18bd.png" 
+            alt="WealthWise Solutions" 
+            className="w-64 md:w-80 lg:w-[28rem] animate-float"
+          />
         </div>
       </div>
       

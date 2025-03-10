@@ -6,13 +6,13 @@ const Footer = () => {
     <footer className="bg-wealthwise-primary text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <img 
               src="/lovable-uploads/5d2cce99-6fc6-40db-b40c-7d0f8ad607db.png" 
               alt="WealthWise Solutions" 
-              className="h-12 mb-4"
+              className="h-20 mb-6"
             />
-            <p className="text-wealthwise-light/80 mb-6">
+            <p className="text-wealthwise-light/80 mb-6 text-center md:text-left">
               Empowering individuals and businesses to achieve financial success through expert guidance and personalized solutions.
             </p>
             <div className="flex space-x-4">
