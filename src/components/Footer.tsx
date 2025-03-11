@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center gap-4 mb-8">
               <img 
-                src="/lovable-uploads/d189fb1f-84da-4d1d-a27e-ffdbfaf60435.png" 
+                src="/lovable-uploads/b0967d24-1c6b-4416-b146-f622ce4a18bd.png" 
                 alt="WealthWise Solutions" 
                 className="h-28 md:h-32"
               />
@@ -18,7 +18,7 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-wealthwise-light/80 mb-8 text-center md:text-left text-lg">
-              Empowering individuals and businesses to achieve financial success through expert guidance and personalized solutions.
+              UAE's premier financial consulting firm helping individuals and businesses secure the best financial solutions.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-3 rounded-full transition-colors">
@@ -67,36 +67,36 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-2xl font-semibold mb-6">Services</h4>
+            <h4 className="text-2xl font-semibold mb-6">Our Services</h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
                   <ArrowRight className="h-5 w-5 mr-3" />
-                  Investment Planning
+                  Personal Loans
                 </a>
               </li>
               <li>
-                <a href="#" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
                   <ArrowRight className="h-5 w-5 mr-3" />
-                  Wealth Management
+                  Business Loans
                 </a>
               </li>
               <li>
-                <a href="#" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
                   <ArrowRight className="h-5 w-5 mr-3" />
-                  Retirement Planning
+                  Mortgage Loans
                 </a>
               </li>
               <li>
-                <a href="#" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
                   <ArrowRight className="h-5 w-5 mr-3" />
-                  Estate Planning
+                  Business Account Opening
                 </a>
               </li>
               <li>
-                <a href="#" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
                   <ArrowRight className="h-5 w-5 mr-3" />
-                  Tax Optimization
+                  Credit Cards
                 </a>
               </li>
             </ul>

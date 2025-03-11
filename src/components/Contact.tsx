@@ -3,14 +3,40 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+}
+
 const Contact = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
+
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validateEmail = (email: string): boolean => {
+    const regex = /^[^\s@]+@gmail\.com$/;
+    return regex.test(email);
+  };
+
+  const validatePhone = (phone: string): boolean => {
+    const regex = /^\+?[0-9]{8,15}$/;
+    return regex.test(phone);
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -18,10 +44,54 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    
+    // Clear error when user types
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }));
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+    let isValid = true;
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+      isValid = false;
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+      isValid = false;
+    } else if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid Gmail address (example@gmail.com)';
+      isValid = false;
+    }
+
+    if (formData.phone && !validatePhone(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+      isValid = false;
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     // In a real app, you would send the form data to a server here
     console.log('Form submitted:', formData);
     toast({
@@ -29,6 +99,7 @@ const Contact = () => {
       description: "Thank you for contacting us. We'll be in touch soon!",
       duration: 5000,
     });
+    
     // Reset form
     setFormData({
       name: '',
@@ -75,7 +146,7 @@ const Contact = () => {
                   <Phone className="text-wealthwise-secondary mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-wealthwise-primary">Phone</h4>
-                    <p className="text-wealthwise-gray">+1 (555) 123-4567</p>
+                    <p className="text-wealthwise-gray">+91 8700500145</p>
                   </div>
                 </div>
                 
@@ -84,9 +155,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-wealthwise-primary">Office</h4>
                     <p className="text-wealthwise-gray">
-                      123 Financial District<br />
-                      New York, NY 10001<br />
-                      United States
+                      Dubai, UAE
                     </p>
                   </div>
                 </div>
@@ -100,7 +169,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-wealthwise-gray mb-1">
-                      Name
+                      Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -108,15 +177,19 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary"
+                      className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary ${
+                        errors.name ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+                    )}
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-wealthwise-gray mb-1">
-                        Email
+                        Email <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
@@ -124,9 +197,13 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary"
+                        className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary ${
+                          errors.email ? 'border-red-500' : 'border-gray-300'
+                        }`}
                       />
+                      {errors.email && (
+                        <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                      )}
                     </div>
                     
                     <div>
@@ -139,24 +216,33 @@ const Contact = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary"
+                        className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary ${
+                          errors.phone ? 'border-red-500' : 'border-gray-300'
+                        }`}
                       />
+                      {errors.phone && (
+                        <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+                      )}
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-wealthwise-gray mb-1">
-                      Message
+                      Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      required
                       rows={4}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary"
+                      className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-wealthwise-primary ${
+                        errors.message ? 'border-red-500' : 'border-gray-300'
+                      }`}
                     ></textarea>
+                    {errors.message && (
+                      <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                    )}
                   </div>
                   
                   <button 

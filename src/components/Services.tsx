@@ -1,43 +1,43 @@
 
-import { LineChart, Wallet, BarChart4, Landmark, GanttChart, PiggyBank } from 'lucide-react';
+import { CreditCard, Building2, Home, LineChart, Wallet, FileText } from 'lucide-react';
 import { useState } from 'react';
 
 const servicesData = [
   {
     id: 1,
-    icon: <LineChart className="h-10 w-10 text-wealthwise-secondary" />,
-    title: "Investment Planning",
-    description: "Develop a tailored investment strategy aligned with your financial goals, risk tolerance, and time horizon."
+    icon: <Wallet className="h-10 w-10 text-wealthwise-secondary" />,
+    title: "Personal Loans",
+    description: "Compare loan offers from multiple banks, get low interest rates & flexible repayment options with fast processing & higher approval chances."
   },
   {
     id: 2,
-    icon: <Wallet className="h-10 w-10 text-wealthwise-secondary" />,
-    title: "Wealth Management",
-    description: "Comprehensive wealth management services including asset allocation, portfolio diversification, and regular performance reviews."
+    icon: <Building2 className="h-10 w-10 text-wealthwise-secondary" />,
+    title: "Business Loans",
+    description: "Loans for startups, SMEs, and large businesses. Get working capital financing & expansion funding with hassle-free documentation & quick approval."
   },
   {
     id: 3,
-    icon: <BarChart4 className="h-10 w-10 text-wealthwise-secondary" />,
-    title: "Retirement Planning",
-    description: "Create a robust retirement plan to ensure financial security throughout your retirement years."
+    icon: <Home className="h-10 w-10 text-wealthwise-secondary" />,
+    title: "Mortgage Loans",
+    description: "Home loans for first-time buyers & investors with competitive interest rates & repayment terms. Loan buyout options to lower monthly payments."
   },
   {
     id: 4,
-    icon: <Landmark className="h-10 w-10 text-wealthwise-secondary" />,
-    title: "Estate Planning",
-    description: "Develop strategies to efficiently transfer wealth to the next generation while minimizing tax implications."
+    icon: <LineChart className="h-10 w-10 text-wealthwise-secondary" />,
+    title: "Business Account Opening",
+    description: "Open corporate bank accounts quickly & efficiently with assistance for banking requirements & compliance. Multi-currency account setup for international business."
   },
   {
     id: 5,
-    icon: <GanttChart className="h-10 w-10 text-wealthwise-secondary" />,
-    title: "Tax Optimization",
-    description: "Implement tax-efficient strategies to minimize your tax burden and maximize your after-tax returns."
+    icon: <CreditCard className="h-10 w-10 text-wealthwise-secondary" />,
+    title: "Credit Cards",
+    description: "Exclusive cashback & travel rewards with 0% interest offers on new cards. Cards with no annual fees & high limits tailored to your needs."
   },
   {
     id: 6,
-    icon: <PiggyBank className="h-10 w-10 text-wealthwise-secondary" />,
-    title: "Education Funding",
-    description: "Plan and save for education expenses with specialized accounts and investment strategies."
+    icon: <FileText className="h-10 w-10 text-wealthwise-secondary" />,
+    title: "Debt Consolidation & Loan Buyout",
+    description: "Combine multiple loans into one to reduce interest. Lower monthly payments & better repayment terms with free consultation to find the best restructuring option."
   },
 ];
 
@@ -81,21 +81,18 @@ const Services = () => {
                   {service.description}
                 </p>
                 <button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className={`mt-4 text-sm font-medium flex items-center ${
                     hoveredCard === service.id ? 'text-wealthwise-secondary' : 'text-wealthwise-primary'
                   }`}
                 >
-                  Learn more
+                  Get in touch
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </button>
               </div>
             ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <button className="button-primary">View All Services</button>
           </div>
         </div>
       </div>

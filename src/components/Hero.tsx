@@ -22,44 +22,32 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center bg-wealthwise-primary overflow-hidden pt-20">
-      {/* Background pattern overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iIzJCNTU0MCIgZmlsbC1vcGFjaXR5PSIwLjQiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYgMzRjMC0yIDEtMyAyLTNzMi45IDEgMyAzdjNjMCAyIDEgMyAzIDNzMy0xIDMtM3YtMWMwLTIgMS00IDMtNHM0IDIgNCA0djEwYzAgMi0xIDMtMyAzcy0zLTEtMy0zVjM2YzAtMS0uNC0yLTEtMnMtMiAuNC0yIDF2MTBjMCAyLTEgMy0zIDNzLTMtMS0zLTN2LTZ2LTRjMC0xLS40LTItMS0ycy0yIC40LTIgMXYxNmMwIDItMSAzLTMgM3MtMy0xLTMtM1YzNHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==')] opacity-20"></div>
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-wealthwise-primary via-wealthwise-dark to-wealthwise-primary bg-size-200 animate-gradient-slow"></div>
       
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 z-10">
-        {/* Logo and content container with animation */}
-        <div className={`w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-16 transition-all duration-1000 ${isScrolled ? 'flex-row-reverse' : ''}`}>
-          {/* Logo section */}
-          <div className={`w-full lg:w-2/5 flex justify-center lg:justify-start transition-all duration-1000 ${isScrolled ? 'animate-fade-in-right' : 'animate-fade-in-left'}`}>
-            <img 
-              src="/lovable-uploads/b0967d24-1c6b-4416-b146-f622ce4a18bd.png" 
-              alt="WealthWise Solutions" 
-              className="w-64 md:w-80 lg:w-[28rem] animate-pulse-once"
-            />
-          </div>
+      {/* Animated particles overlay */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYgMzRjMC0yIDEtMyAyLTNzMi45IDEgMyAzdjNjMCAyIDEgMyAzIDNzMy0xIDMtM3YtMWMwLTIgMS00IDMtNHM0IDIgNCA0djEwYzAgMi0xIDMtMyAzcy0zLTEtMy0zVjM2YzAtMS0uNC0yLTEtMnMtMiAuNC0yIDF2MTBjMCAyLTEgMy0zIDNzLTMtMS0zLTN2LTZ2LTRjMC0xLS40LTItMS0ycy0yIC40LTIgMXYxNmMwIDItMSAzLTMgM3MtMy0xLTMtM1YzNHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==')] opacity-20"></div>
+      
+      <div className="container mx-auto px-6 z-10">
+        <div className="max-w-4xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight animate-fade-in">
+            Your path to financial <span className="text-wealthwise-secondary">freedom</span> starts with <span className="text-wealthwise-secondary">WealthWise</span>
+          </h1>
           
-          {/* Content section */}
-          <div className={`w-full lg:w-3/5 text-center lg:text-left text-white transition-all duration-1000 ${isScrolled ? 'animate-fade-in-left' : 'animate-fade-in-right'}`}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Your path to financial freedom starts with <span className="text-wealthwise-secondary">WealthWise</span>
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-wealthwise-light">
-              Expert financial guidance to help you build and protect your wealth for generations to come.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <button 
-                onClick={() => scrollToSection('services')} 
-                className="button-secondary"
-              >
-                Discover Our Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')} 
-                className="button-primary bg-white/20 hover:bg-white/30 backdrop-blur-sm"
-              >
-                Schedule a Consultation
-              </button>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-delay-1">
+            <button 
+              onClick={() => scrollToSection('services')} 
+              className="rounded-full px-8 py-4 bg-wealthwise-secondary text-wealthwise-dark font-semibold text-lg hover:shadow-lg hover:shadow-wealthwise-secondary/30 transition-all duration-300 transform hover:-translate-y-1"
+            >
+              Discover Our Services
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="rounded-full px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold text-lg hover:bg-white/30 hover:shadow-lg hover:shadow-white/20 transition-all duration-300 transform hover:-translate-y-1"
+            >
+              Schedule a Consultation
+            </button>
           </div>
         </div>
       </div>

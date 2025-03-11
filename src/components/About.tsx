@@ -1,5 +1,5 @@
 
-import { Shield, Award, TrendingUp } from 'lucide-react';
+import { Shield, Award, TrendingUp, Building, Globe, Users } from 'lucide-react';
 
 const About = () => {
   return (
@@ -11,34 +11,56 @@ const About = () => {
               About WealthWise Solutions
             </h2>
             <p className="text-wealthwise-gray mt-6 max-w-3xl mx-auto">
-              We are a premier financial advisory firm dedicated to helping individuals and businesses achieve their financial goals with confidence and clarity.
+              We are a UAE-based financial consulting firm specializing in helping individuals and businesses 
+              secure the best financial products and services tailored to their unique needs.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
-              <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Who We Are</h3>
               <p className="text-wealthwise-gray mb-6">
-                At WealthWise Solutions, we believe everyone deserves a secure financial future. Our mission is to provide personalized financial strategies that align with your unique goals and values.
+                At WealthWise Solutions, we connect clients with multiple banks to provide tailored financial 
+                solutions that match their specific needs while ensuring fast approvals, competitive interest 
+                rates, and smooth processing for all financial products.
               </p>
               
-              <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Our Approach</h3>
-              <p className="text-wealthwise-gray mb-6">
-                We take a holistic approach to financial planning, considering all aspects of your financial life to create comprehensive solutions that evolve with you through every life stage.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-                <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:scale-105">
-                  <Shield className="h-10 w-10 text-wealthwise-secondary mb-2" />
-                  <h4 className="font-semibold text-wealthwise-primary">Trust</h4>
+              <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Why Choose WealthWise Solutions?</h3>
+              <div className="grid grid-cols-1 gap-4 mt-4">
+                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
+                  <Shield className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-wealthwise-primary">Multi-Bank Tie-Ups</h4>
+                    <p className="text-wealthwise-gray text-sm">Get access to multiple loan & credit card offers in one place</p>
+                  </div>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:scale-105">
-                  <Award className="h-10 w-10 text-wealthwise-secondary mb-2" />
-                  <h4 className="font-semibold text-wealthwise-primary">Excellence</h4>
+                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
+                  <Users className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-wealthwise-primary">Personalized Service</h4>
+                    <p className="text-wealthwise-gray text-sm">Tailored financial solutions based on your unique profile</p>
+                  </div>
                 </div>
-                <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:scale-105">
-                  <TrendingUp className="h-10 w-10 text-wealthwise-secondary mb-2" />
-                  <h4 className="font-semibold text-wealthwise-primary">Growth</h4>
+                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
+                  <TrendingUp className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-wealthwise-primary">Fast Approvals</h4>
+                    <p className="text-wealthwise-gray text-sm">We help clients get approved quickly with the best terms available</p>
+                  </div>
+                </div>
+                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
+                  <Award className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-wealthwise-primary">Zero Upfront Fees</h4>
+                    <p className="text-wealthwise-gray text-sm">Pay only after successful approval & disbursal</p>
+                  </div>
+                </div>
+                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
+                  <Building className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-wealthwise-primary">Expert Guidance</h4>
+                    <p className="text-wealthwise-gray text-sm">Professional financial advisors with deep banking insights</p>
+                  </div>
                 </div>
               </div>
             </div>
