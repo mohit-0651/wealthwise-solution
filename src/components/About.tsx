@@ -28,13 +28,6 @@ const About = () => {
               <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Why Choose WealthWise Solutions?</h3>
               <div className="grid grid-cols-1 gap-4 mt-4">
                 <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
-                  <Shield className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-wealthwise-primary">Multi-Bank Tie-Ups</h4>
-                    <p className="text-wealthwise-gray text-sm">Get access to multiple loan & credit card offers in one place</p>
-                  </div>
-                </div>
-                <div className="flex items-start p-4 bg-white rounded-lg shadow-sm transform transition-transform hover:shadow-md">
                   <Users className="h-8 w-8 text-wealthwise-secondary mr-4 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-wealthwise-primary">Personalized Service</h4>

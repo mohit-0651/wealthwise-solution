@@ -7,15 +7,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="flex flex-col items-center md:items-start">
-            <div className="flex items-center gap-4 mb-8">
+            <div className="mb-8">
               <img 
-                src="/lovable-uploads/b0967d24-1c6b-4416-b146-f622ce4a18bd.png" 
+                src="/lovable-uploads/d189fb1f-84da-4d1d-a27e-ffdbfaf60435.png" 
                 alt="WealthWise Solutions" 
                 className="h-28 md:h-32"
               />
-              <h3 className="text-2xl md:text-3xl font-bold text-wealthwise-secondary">
-                WealthWise<br />Solutions
-              </h3>
             </div>
             <p className="text-wealthwise-light/80 mb-8 text-center md:text-left text-lg">
               UAE's premier financial consulting firm helping individuals and businesses secure the best financial solutions.

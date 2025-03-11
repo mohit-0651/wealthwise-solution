@@ -42,6 +42,9 @@ const Header = () => {
             alt="WealthWise Solutions Logo" 
             className="h-12 md:h-14"
           />
+          <h1 className={`ml-3 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
+            WealthWise Solutions
+          </h1>
         </div>
         
         {/* Desktop Navigation */}
