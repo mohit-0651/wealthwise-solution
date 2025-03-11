@@ -20,9 +20,9 @@ const About = () => {
             <div className="order-2 md:order-1">
               <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Who We Are</h3>
               <p className="text-wealthwise-gray mb-6">
-                At WealthWise Solutions, we connect clients with multiple banks to provide tailored financial 
-                solutions that match their specific needs while ensuring fast approvals, competitive interest 
-                rates, and smooth processing for all financial products.
+                Your Trusted Financial Consulting Partner in the UAE
+                At WealthWise Solutions, we specialize in helping individuals and businesses secure the best financial solutions tailored to their needs. We provide expert guidance and seamless processing to ensure you get the best offers available in the UAE.
+                Helping our clients get fast approvals, competitive interest rates, and flexible repayment options.
               </p>
               
               <h3 className="text-2xl font-bold text-wealthwise-primary mb-4">Why Choose WealthWise Solutions?</h3>
