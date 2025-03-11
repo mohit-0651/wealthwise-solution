@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Enhanced animated background with 3D effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-wealthwise-dark via-wealthwise-primary to-wealthwise-dark bg-size-200 animate-gradient-slow">
         {/* 3D-like geometric shapes */}
@@ -36,10 +36,8 @@ const Hero = () => {
       <div className="container mx-auto px-6 z-10">
         <div className="max-w-4xl ml-0 md:ml-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight animate-fade-in">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">Your path to financial</span> 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-wealthwise-secondary to-amber-300"> freedom</span> 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">starts with</span> 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-wealthwise-secondary to-amber-300"> WealthWise</span>
+            <span className="text-white">Your path to financial freedom starts with </span> 
+            <span className="text-wealthwise-secondary">WealthWise</span>
           </h1>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-delay-1">
