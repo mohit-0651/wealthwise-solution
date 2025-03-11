@@ -38,7 +38,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <img 
-            src="/lovable-uploads/d189fb1f-84da-4d1d-a27e-ffdbfaf60435.png" 
+            src="/lovable-uploads/0b280022-7e96-408e-888b-fbfb3234cdce.png" 
             alt="WealthWise Solutions Logo" 
             className="h-12 md:h-14"
           />
