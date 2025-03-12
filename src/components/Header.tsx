@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -40,14 +39,13 @@ const Header = () => {
           <img 
             src="/lovable-uploads/0b280022-7e96-408e-888b-fbfb3234cdce.png" 
             alt="WealthWise Solutions Logo" 
-            className="h-16 md:h-18" 
+            className="h-20 md:h-22" 
           />
-          <h1 className={`ml-1 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
+          <h1 className={`ml-0 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
             WealthWise Solutions
           </h1>
         </div>
         
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           <a onClick={() => scrollToSection('home')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>Home</a>
           <a onClick={() => scrollToSection('about')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>About Us</a>
@@ -55,7 +53,6 @@ const Header = () => {
           <a onClick={() => scrollToSection('contact')} className={`nav-link cursor-pointer ${!scrolled ? 'text-white hover:text-wealthwise-secondary' : ''}`}>Contact</a>
         </nav>
         
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           {mobileMenuOpen ? (
             <X 
@@ -71,7 +68,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Mobile Navigation */}
       <div 
         className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
           mobileMenuOpen ? 'max-h-64' : 'max-h-0'
