@@ -40,9 +40,9 @@ const Header = () => {
           <img 
             src="/lovable-uploads/0b280022-7e96-408e-888b-fbfb3234cdce.png" 
             alt="WealthWise Solutions Logo" 
-            className="h-12 md:h-14"
+            className="h-16 md:h-18" 
           />
-          <h1 className={`ml-3 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
+          <h1 className={`ml-1 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
             WealthWise Solutions
           </h1>
         </div>

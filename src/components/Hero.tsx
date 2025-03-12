@@ -22,12 +22,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Enhanced animated background with 3D effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-wealthwise-dark via-wealthwise-primary to-wealthwise-dark bg-size-200 animate-gradient-slow">
-        {/* 3D-like geometric shapes */}
-        <div className="absolute w-64 h-64 rounded-full bg-wealthwise-secondary/10 blur-3xl top-1/4 -left-32 animate-float"></div>
-        <div className="absolute w-96 h-96 rounded-full bg-wealthwise-secondary/10 blur-3xl bottom-1/4 -right-48 animate-float-reverse"></div>
+    <section id="home" className="relative min-h-[65vh] flex items-center justify-center overflow-hidden pt-20">
+      {/* Enhanced animated background with more attractive design */}
+      <div className="absolute inset-0 bg-gradient-to-br from-wealthwise-dark via-blue-900 to-purple-900 bg-size-200 animate-gradient-slow">
+        {/* Enhanced 3D-like geometric shapes */}
+        <div className="absolute w-72 h-72 rounded-full bg-blue-500/20 blur-3xl top-1/4 -left-32 animate-float"></div>
+        <div className="absolute w-96 h-96 rounded-full bg-purple-500/20 blur-3xl bottom-1/4 -right-48 animate-float-reverse"></div>
+        <div className="absolute w-64 h-64 rounded-full bg-wealthwise-secondary/20 blur-3xl center top-1/3 left-1/2 animate-float-reverse"></div>
       </div>
       
       {/* Enhanced particles overlay with depth effect */}
@@ -36,8 +37,11 @@ const Hero = () => {
       <div className="container mx-auto px-6 z-10">
         <div className="max-w-4xl ml-0 md:ml-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight animate-fade-in">
-            <span className="text-white">Your path to financial freedom starts with </span> 
-            <span className="text-wealthwise-secondary">WealthWise</span>
+            <span className="text-white">Your path to financial freedom starts with </span>
+            <span className="text-wealthwise-secondary relative inline-block transform hover:scale-105 transition-transform duration-300">
+              <span className="relative z-10 drop-shadow-[0_2px_3px_rgba(246,192,82,0.5)]">WealthWise</span>
+              <span className="absolute -inset-1 bg-gradient-to-r from-wealthwise-secondary/80 to-amber-400/50 blur-md opacity-75 -z-10 transform -skew-x-12"></span>
+            </span>
           </h1>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-delay-1">
