@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -30,8 +31,8 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white shadow-md py-2' 
-          : 'bg-black/50 backdrop-blur-sm py-4'
+          ? 'bg-white shadow-md py-1' 
+          : 'bg-black/50 backdrop-blur-sm py-2'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -39,7 +40,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/0b280022-7e96-408e-888b-fbfb3234cdce.png" 
             alt="WealthWise Solutions Logo" 
-            className="h-20 md:h-22" 
+            className="h-16 md:h-18" 
           />
           <h1 className={`ml-0 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
             WealthWise Solutions
@@ -73,7 +74,7 @@ const Header = () => {
           mobileMenuOpen ? 'max-h-64' : 'max-h-0'
         }`}
       >
-        <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="container mx-auto px-4 py-3 flex flex-col space-y-3">
           <a onClick={() => scrollToSection('home')} className="nav-link cursor-pointer">Home</a>
           <a onClick={() => scrollToSection('about')} className="nav-link cursor-pointer">About Us</a>
           <a onClick={() => scrollToSection('services')} className="nav-link cursor-pointer">Services</a>

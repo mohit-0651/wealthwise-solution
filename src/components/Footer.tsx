@@ -1,61 +1,62 @@
+
 import { Facebook, Twitter, Linkedin, Instagram, ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
     <footer className="bg-wealthwise-primary text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-center md:items-start">
-            <div className="mb-8">
+            <div className="mb-4">
               <img 
                 src="/lovable-uploads/ec06b161-7102-45e4-b6c1-cb96e4d0b8aa.png" 
                 alt="WealthWise Solutions" 
-                className="h-44 md:h-48"
+                className="h-36 md:h-40"
               />
             </div>
-            <p className="text-wealthwise-light/80 mb-8 text-center md:text-left text-lg">
+            <p className="text-wealthwise-light/80 mb-4 text-center md:text-left text-base">
               UAE's premier financial consulting firm helping individuals and businesses secure the best financial solutions.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-3 rounded-full transition-colors">
-                <Facebook className="h-6 w-6" />
+            <div className="flex space-x-4">
+              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-2 rounded-full transition-colors">
+                <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-3 rounded-full transition-colors">
-                <Twitter className="h-6 w-6" />
+              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-2 rounded-full transition-colors">
+                <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-3 rounded-full transition-colors">
-                <Linkedin className="h-6 w-6" />
+              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-2 rounded-full transition-colors">
+                <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-3 rounded-full transition-colors">
-                <Instagram className="h-6 w-6" />
+              <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-2 rounded-full transition-colors">
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
           
           <div>
-            <h4 className="text-2xl font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-4">
+            <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#home" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#about" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Services
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#contact" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Contact
                 </a>
               </li>
@@ -63,35 +64,35 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-2xl font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-4">
+            <h4 className="text-xl font-semibold mb-4">Our Services</h4>
+            <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Personal Loans
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Business Loans
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Mortgage Loans
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Business Account Opening
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-lg">
-                  <ArrowRight className="h-5 w-5 mr-3" />
+                <a href="#services" className="text-wealthwise-light/80 hover:text-wealthwise-secondary flex items-center text-base">
+                  <ArrowRight className="h-4 w-4 mr-2" />
                   Credit Cards
                 </a>
               </li>
@@ -99,34 +100,34 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-2xl font-semibold mb-6">Contact Us</h4>
-            <ul className="space-y-6">
+            <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
+            <ul className="space-y-4">
               <li className="flex items-start">
-                <Mail className="text-wealthwise-secondary mr-4 mt-1 h-6 w-6 flex-shrink-0" />
+                <Mail className="text-wealthwise-secondary mr-3 mt-1 h-5 w-5 flex-shrink-0" />
                 <div>
-                  <h5 className="font-semibold text-wealthwise-light text-lg">Email</h5>
-                  <p className="text-wealthwise-light/80 text-lg">info@wealthwisesolutions.com</p>
+                  <h5 className="font-semibold text-wealthwise-light text-base">Email</h5>
+                  <p className="text-wealthwise-light/80 text-base">info@wealthwisesolutions.com</p>
                 </div>
               </li>
               <li className="flex items-start">
-                <Phone className="text-wealthwise-secondary mr-4 mt-1 h-6 w-6 flex-shrink-0" />
+                <Phone className="text-wealthwise-secondary mr-3 mt-1 h-5 w-5 flex-shrink-0" />
                 <div>
-                  <h5 className="font-semibold text-wealthwise-light text-lg">Phone</h5>
-                  <p className="text-wealthwise-light/80 text-lg">+91 8700500145</p>
+                  <h5 className="font-semibold text-wealthwise-light text-base">Phone</h5>
+                  <p className="text-wealthwise-light/80 text-base">+91 8700500145</p>
                 </div>
               </li>
               <li className="flex items-start">
-                <MapPin className="text-wealthwise-secondary mr-4 mt-1 h-6 w-6 flex-shrink-0" />
+                <MapPin className="text-wealthwise-secondary mr-3 mt-1 h-5 w-5 flex-shrink-0" />
                 <div>
-                  <h5 className="font-semibold text-wealthwise-light text-lg">Location</h5>
-                  <p className="text-wealthwise-light/80 text-lg">Dubai, UAE</p>
+                  <h5 className="font-semibold text-wealthwise-light text-base">Location</h5>
+                  <p className="text-wealthwise-light/80 text-base">Dubai, UAE</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-12 pt-8 text-center text-lg text-wealthwise-light/70">
+        <div className="border-t border-white/10 mt-8 pt-6 text-center text-sm text-wealthwise-light/70">
           <p>© {new Date().getFullYear()} WealthWise Solutions. All Rights Reserved.</p>
         </div>
       </div>
