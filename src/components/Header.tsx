@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -39,7 +40,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/0b280022-7e96-408e-888b-fbfb3234cdce.png" 
             alt="WealthWise Solutions Logo" 
-            className="h-20 md:h-22" 
+            className="h-24 md:h-26" 
           />
           <h1 className={`ml-0 font-bold text-xl md:text-2xl ${!scrolled ? 'text-white' : 'text-wealthwise-primary'}`}>
             WealthWise Solutions

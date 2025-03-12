@@ -10,7 +10,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/ec06b161-7102-45e4-b6c1-cb96e4d0b8aa.png" 
                 alt="WealthWise Solutions" 
-                className="h-44 md:h-48"
+                className="h-48 md:h-52"
               />
             </div>
             <p className="text-wealthwise-light/80 mb-8 text-center md:text-left text-lg">
