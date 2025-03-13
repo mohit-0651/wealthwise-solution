@@ -14,10 +14,7 @@ const Footer = () => {
                 className="h-36 md:h-40"
               />
             </div>
-            <p className="text-wealthwise-light/80 mb-4 text-base">
-              UAE's premier financial consulting firm helping individuals and businesses secure the best financial solutions.
-            </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-4">
               <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-2 rounded-full transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
