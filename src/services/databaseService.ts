@@ -1,4 +1,6 @@
 
+import { supabase } from '@/integrations/supabase/client';
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -6,53 +8,56 @@ interface ContactFormData {
   message: string;
 }
 
-// In a real application, this would connect to a database like Firebase or a backend API
-// For now, we'll simulate database storage with localStorage
 class DatabaseService {
-  // Save contact form data
-  saveContactForm(data: ContactFormData): Promise<{ success: boolean; message: string }> {
-    return new Promise((resolve) => {
-      try {
-        // Get existing submissions or initialize empty array
-        const existingData = localStorage.getItem('contactSubmissions');
-        const submissions = existingData ? JSON.parse(existingData) : [];
-        
-        // Add timestamp to the data
-        const submissionWithTimestamp = {
-          ...data,
-          timestamp: new Date().toISOString(),
-        };
-        
-        // Add new submission
-        submissions.push(submissionWithTimestamp);
-        
-        // Save back to localStorage
-        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
-        
-        console.log('Contact form submission saved:', submissionWithTimestamp);
-        
-        // Simulate a small delay like a real API call
-        setTimeout(() => {
-          resolve({ 
-            success: true, 
-            message: 'Your message has been sent successfully!' 
-          });
-        }, 500);
-      } catch (error) {
+  // Save contact form data to Supabase
+  async saveContactForm(data: ContactFormData): Promise<{ success: boolean; message: string }> {
+    try {
+      // Insert the form data into the contact_submissions table
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([{
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message
+        }]);
+      
+      if (error) {
         console.error('Error saving contact form data:', error);
-        resolve({ 
+        return { 
           success: false, 
           message: 'There was an error sending your message. Please try again.' 
-        });
+        };
       }
-    });
+      
+      console.log('Contact form submission saved to Supabase');
+      return { 
+        success: true, 
+        message: 'Your message has been sent successfully!' 
+      };
+    } catch (error) {
+      console.error('Error saving contact form data:', error);
+      return { 
+        success: false, 
+        message: 'There was an error sending your message. Please try again.' 
+      };
+    }
   }
   
-  // Get all contact form submissions (for admin purposes)
-  getContactSubmissions(): ContactFormData[] {
+  // Get all contact form submissions (requires authentication)
+  async getContactSubmissions(): Promise<ContactFormData[]> {
     try {
-      const data = localStorage.getItem('contactSubmissions');
-      return data ? JSON.parse(data) : [];
+      const { data, error } = await supabase
+        .from('contact_submissions')
+        .select('*')
+        .order('timestamp', { ascending: false });
+      
+      if (error) {
+        console.error('Error retrieving contact submissions:', error);
+        return [];
+      }
+      
+      return data || [];
     } catch (error) {
       console.error('Error retrieving contact submissions:', error);
       return [];
