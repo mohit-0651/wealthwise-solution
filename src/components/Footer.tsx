@@ -6,15 +6,15 @@ const Footer = () => {
     <footer className="bg-wealthwise-primary text-white">
       <div className="container mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <div className="mb-4">
               <img 
                 src="/lovable-uploads/ec06b161-7102-45e4-b6c1-cb96e4d0b8aa.png" 
                 alt="WealthWise Solutions" 
-                className="h-36 md:h-40"
+                className="h-40 md:h-44"
               />
             </div>
-            <div className="flex space-x-4 mb-4">
+            <div className="flex space-x-4 mb-4 mt-2">
               <a href="#" className="bg-white/10 hover:bg-wealthwise-secondary hover:text-wealthwise-primary p-2 rounded-full transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
@@ -30,7 +30,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div>
+          <div className="mt-2">
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -60,7 +60,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="mt-2">
             <h4 className="text-xl font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
               <li>
@@ -96,28 +96,28 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="mt-2">
             <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail className="text-wealthwise-secondary mr-3 mt-1 h-5 w-5 flex-shrink-0" />
                 <div>
                   <h5 className="font-semibold text-wealthwise-light text-base">Email</h5>
-                  <p className="text-wealthwise-light/80 text-base">info@wealthwisesolutions.com</p>
+                  <p className="text-wealthwise-light/80 text-base">contact@wealthwisesolutions.ae</p>
                 </div>
               </li>
               <li className="flex items-start">
                 <Phone className="text-wealthwise-secondary mr-3 mt-1 h-5 w-5 flex-shrink-0" />
                 <div>
                   <h5 className="font-semibold text-wealthwise-light text-base">Phone</h5>
-                  <p className="text-wealthwise-light/80 text-base">+91 8700500145</p>
+                  <p className="text-wealthwise-light/80 text-base">+971 50 523 8735</p>
                 </div>
               </li>
               <li className="flex items-start">
                 <MapPin className="text-wealthwise-secondary mr-3 mt-1 h-5 w-5 flex-shrink-0" />
                 <div>
                   <h5 className="font-semibold text-wealthwise-light text-base">Location</h5>
-                  <p className="text-wealthwise-light/80 text-base">Dubai, UAE</p>
+                  <p className="text-wealthwise-light/80 text-base">Ajman, UAE</p>
                 </div>
               </li>
             </ul>

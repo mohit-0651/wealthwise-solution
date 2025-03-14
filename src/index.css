@@ -111,11 +111,11 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-wealthwise-primary mb-4 relative;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-wealthwise-primary mb-4 relative inline-block;
   }
   
   .section-title::after {
-    @apply content-[''] absolute w-16 h-1 bg-wealthwise-secondary left-0 -bottom-2;
+    @apply content-[''] absolute w-16 h-1 bg-wealthwise-secondary left-1/2 -translate-x-1/2 -bottom-2;
   }
   
   .service-card {
