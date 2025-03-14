@@ -9,10 +9,13 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    outDir: "dist", // ✅ Ensures Cloudflare deploys the correct folder
+    emptyOutDir: true, // ✅ Clears old files before each build
+  },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === "development" ? componentTagger() : null, // ✅ Ensures proper production build
   ].filter(Boolean),
   resolve: {
     alias: {
