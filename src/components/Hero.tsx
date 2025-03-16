@@ -24,34 +24,48 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-[65vh] flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-gradient-to-b from-wealthwise-dark to-wealthwise-primary">
-        <div className="absolute w-80 h-80 rounded-full bg-wealthwise-primary/30 blur-3xl top-1/4 -left-32 animate-float"></div>
-        <div className="absolute w-96 h-96 rounded-full bg-wealthwise-primary/20 blur-3xl bottom-1/4 -right-48 animate-float-reverse"></div>
+        <div className="absolute w-80 h-80 rounded-full bg-wealthwise-primary/30 blur-3xl top-1/4 -left-32 animate-float" aria-hidden="true"></div>
+        <div className="absolute w-96 h-96 rounded-full bg-wealthwise-primary/20 blur-3xl bottom-1/4 -right-48 animate-float-reverse" aria-hidden="true"></div>
       </div>
       
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYgMzRjMC0yIDEtMyAyLTNzMi45IDEgMyAzdjNjMCAyIDEgMyAzIDNzMy0xIDMtM3YtMWMwLTIgMS00IDMtNHM0IDIgNCA0djEwYzAgMi0xIDMtMyAzcy0zLTEtMy0zVjM2YzAtMS0uNC0yLTEtMnMtMiAuNC0yIDF2MTBjMCAyLTEgMy0zIDNzLTMtMS0zLTN2LTZ2LTRjMC0xLS40LTItMS0ycy0yIC40LTIgMXYxNmMwIDItMSAzLTMgM3MtMy0xLTMtM1YzNHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==')] opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiPgogICAgICAgICAgICA8cGF0aCBkPSJNMzYgMzRjMC0yIDEtMyAyLTNzMi45IDEgMyAzdjNjMCAyIDEgMyAzIDNzMy0xIDMtM3YtMWMwLTIgMS00IDMtNHM0IDIgNCA0djEwYzAgMi0xIDMtMyAzcy0zLTEtMy0zVjM2YzAtMS0uNC0yLTEtMnMtMiAuNC0yIDF2MTBjMCAyLTEgMy0zIDNzLTMtMS0zLTN2LTZ2LTRjMC0xLS40LTItMS0ycy0yIC40LTIgMXYxNmMwIDItMSAzLTMgM3MtMy0xLTMtM1YzNHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==')] opacity-20" aria-hidden="true"></div>
       
       <div className="container mx-auto px-6 z-10">
         <div className="max-w-4xl ml-0 md:ml-8">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight animate-fade-in">
-            <span className="text-white">Your path to financial freedom starts with </span>
+            <span className="text-white">Your path to financial freedom in </span>
+            <span className="text-wealthwise-secondary font-extrabold tracking-wide">
+              UAE
+            </span>
+            <span className="text-white"> with </span>
             <span className="text-wealthwise-secondary font-extrabold tracking-wide">
               WealthWise
             </span>
           </h1>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-delay-1">
-            <button 
-              onClick={() => scrollToSection('services')} 
+            <a 
+              href="#services"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('services');
+              }}
               className="rounded-full px-8 py-4 bg-gradient-to-r from-wealthwise-secondary to-amber-400 text-wealthwise-dark font-semibold text-lg hover:shadow-lg hover:shadow-wealthwise-secondary/30 transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="Learn about our financial services in UAE"
             >
-              Discover Our Services
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
+              Discover Our Services in UAE
+            </a>
+            <a 
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('contact');
+              }}
               className="rounded-full px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold text-lg border border-white/30 hover:bg-white/30 hover:shadow-lg hover:shadow-white/20 transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="Schedule a financial consultation in Dubai"
             >
               Schedule a Consultation
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -60,8 +74,9 @@ const Hero = () => {
         <button 
           onClick={() => scrollToSection('about')}
           className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors border border-white/30"
+          aria-label="Scroll to about section"
         >
-          <ChevronDown className="text-white h-6 w-6" />
+          <ChevronDown className="text-white h-6 w-6" aria-hidden="true" />
         </button>
       </div>
     </section>
