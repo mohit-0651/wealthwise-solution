@@ -4,10 +4,10 @@ import { Mail, MapPin, Phone, Clock } from 'lucide-react';
 
 const CustomContact = () => {
   return (
-    <section id="contact" className="py-16 bg-gray-50">
+    <section id="contact" className="py-16 bg-gray-50" aria-labelledby="contact-heading">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 animate-on-scroll">
-          <h2 className="section-title mx-auto text-center">Get in Touch</h2>
+          <h2 id="contact-heading" className="section-title mx-auto text-center">Get in Touch</h2>
           <p className="text-wealthwise-gray mt-6 max-w-2xl mx-auto">
             Ready to take the next step in your financial journey? Our team is here to help.
             Schedule a consultation today and discover the WealthWise difference.
@@ -22,27 +22,31 @@ const CustomContact = () => {
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-wealthwise-light p-3 rounded-lg mr-4">
-                  <Phone className="text-wealthwise-primary h-5 w-5" />
+                  <Phone className="text-wealthwise-primary h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 className="font-medium text-wealthwise-dark">Phone</h4>
-                  <p className="text-wealthwise-gray mt-1">+971 50 523 8735</p>
+                  <p className="text-wealthwise-gray mt-1">
+                    <a href="tel:+971505238735" className="hover:text-wealthwise-primary transition-colors">+971 50 523 8735</a>
+                  </p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="bg-wealthwise-light p-3 rounded-lg mr-4">
-                  <Mail className="text-wealthwise-primary h-5 w-5" />
+                  <Mail className="text-wealthwise-primary h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 className="font-medium text-wealthwise-dark">Email</h4>
-                  <p className="text-wealthwise-gray mt-1">contact@wealthwisesolutions.ae</p>
+                  <p className="text-wealthwise-gray mt-1">
+                    <a href="mailto:contact@wealthwisesolutions.ae" className="hover:text-wealthwise-primary transition-colors">contact@wealthwisesolutions.ae</a>
+                  </p>
                 </div>
               </div>
               
               <div className="flex items-start">
                 <div className="bg-wealthwise-light p-3 rounded-lg mr-4">
-                  <MapPin className="text-wealthwise-primary h-5 w-5" />
+                  <MapPin className="text-wealthwise-primary h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 className="font-medium text-wealthwise-dark">Office Address</h4>
@@ -52,7 +56,7 @@ const CustomContact = () => {
               
               <div className="flex items-start">
                 <div className="bg-wealthwise-light p-3 rounded-lg mr-4">
-                  <Clock className="text-wealthwise-primary h-5 w-5" />
+                  <Clock className="text-wealthwise-primary h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 className="font-medium text-wealthwise-dark">Office Hours</h4>

@@ -22,7 +22,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[65vh] flex items-center justify-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-[65vh] flex items-center justify-center overflow-hidden pt-20" aria-label="Hero section">
       <div className="absolute inset-0 bg-gradient-to-b from-wealthwise-dark to-wealthwise-primary">
         <div className="absolute w-80 h-80 rounded-full bg-wealthwise-primary/30 blur-3xl top-1/4 -left-32 animate-float"></div>
         <div className="absolute w-96 h-96 rounded-full bg-wealthwise-primary/20 blur-3xl bottom-1/4 -right-48 animate-float-reverse"></div>
@@ -43,12 +43,14 @@ const Hero = () => {
             <button 
               onClick={() => scrollToSection('services')} 
               className="rounded-full px-8 py-4 bg-gradient-to-r from-wealthwise-secondary to-amber-400 text-wealthwise-dark font-semibold text-lg hover:shadow-lg hover:shadow-wealthwise-secondary/30 transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="Discover Our Services"
             >
               Discover Our Services
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
               className="rounded-full px-8 py-4 bg-white/20 backdrop-blur-sm text-white font-semibold text-lg border border-white/30 hover:bg-white/30 hover:shadow-lg hover:shadow-white/20 transition-all duration-300 transform hover:-translate-y-1"
+              aria-label="Schedule a Consultation"
             >
               Schedule a Consultation
             </button>
@@ -60,6 +62,7 @@ const Hero = () => {
         <button 
           onClick={() => scrollToSection('about')}
           className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors border border-white/30"
+          aria-label="Scroll to About section"
         >
           <ChevronDown className="text-white h-6 w-6" />
         </button>

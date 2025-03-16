@@ -5,37 +5,37 @@ import { useState } from 'react';
 const servicesData = [
   {
     id: 1,
-    icon: <Wallet className="h-10 w-10 text-wealthwise-secondary" />,
+    icon: <Wallet className="h-10 w-10 text-wealthwise-secondary" aria-hidden="true" />,
     title: "Personal Loans",
     description: "Compare loan offers from multiple banks, get low interest rates & flexible repayment options with fast processing & higher approval chances."
   },
   {
     id: 2,
-    icon: <Building2 className="h-10 w-10 text-wealthwise-secondary" />,
+    icon: <Building2 className="h-10 w-10 text-wealthwise-secondary" aria-hidden="true" />,
     title: "Business Loans",
     description: "Loans for startups, SMEs, and large businesses. Get working capital financing & expansion funding with hassle-free documentation & quick approval."
   },
   {
     id: 3,
-    icon: <Home className="h-10 w-10 text-wealthwise-secondary" />,
+    icon: <Home className="h-10 w-10 text-wealthwise-secondary" aria-hidden="true" />,
     title: "Mortgage Loans",
     description: "Home loans for first-time buyers & investors with competitive interest rates & repayment terms. Loan buyout options to lower monthly payments."
   },
   {
     id: 4,
-    icon: <LineChart className="h-10 w-10 text-wealthwise-secondary" />,
+    icon: <LineChart className="h-10 w-10 text-wealthwise-secondary" aria-hidden="true" />,
     title: "Business Account Opening",
     description: "Open corporate bank accounts quickly & efficiently with assistance for banking requirements & compliance. Multi-currency account setup for international business."
   },
   {
     id: 5,
-    icon: <CreditCard className="h-10 w-10 text-wealthwise-secondary" />,
+    icon: <CreditCard className="h-10 w-10 text-wealthwise-secondary" aria-hidden="true" />,
     title: "Credit Cards",
     description: "Exclusive cashback & travel rewards with 0% interest offers on new cards. Cards with no annual fees & high limits tailored to your needs."
   },
   {
     id: 6,
-    icon: <FileText className="h-10 w-10 text-wealthwise-secondary" />,
+    icon: <FileText className="h-10 w-10 text-wealthwise-secondary" aria-hidden="true" />,
     title: "Debt Consolidation & Loan Buyout",
     description: "Combine multiple loans into one to reduce interest. Lower monthly payments & better repayment terms with free consultation to find the best restructuring option."
   },
@@ -45,11 +45,11 @@ const Services = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="section-title text-center mx-auto after:left-1/2 after:-translate-x-1/2">
+            <h2 id="services-heading" className="section-title text-center mx-auto after:left-1/2 after:-translate-x-1/2">
               Our Services
             </h2>
             <p className="text-wealthwise-gray mt-6 max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ const Services = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesData.map((service) => (
-              <div 
+              <article 
                 key={service.id} 
                 className={`service-card group ${
                   hoveredCard === service.id ? 'bg-wealthwise-primary text-white' : ''
@@ -85,13 +85,14 @@ const Services = () => {
                   className={`mt-4 text-sm font-medium flex items-center ${
                     hoveredCard === service.id ? 'text-wealthwise-secondary' : 'text-wealthwise-primary'
                   }`}
+                  aria-label={`Get in touch about ${service.title}`}
                 >
                   Get in touch
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                   </svg>
                 </button>
-              </div>
+              </article>
             ))}
           </div>
         </div>
